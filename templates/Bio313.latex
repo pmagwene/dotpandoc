@@ -17,6 +17,8 @@
     \usepackage[utf8]{inputenc}
   \fi
 \fi
+\usepackage[dvipsnames,svgnames,x11names,hyperref]{xcolor}
+
 $if(natbib)$
 \usepackage{natbib}
 \bibliographystyle{plainnat}
@@ -85,8 +87,9 @@ $endif$
 \setlength{\parskip}{6pt plus 2pt minus 1pt}
 \setlength{\emergencystretch}{3em}  % prevent overfull lines
 
+\newcommand{\lt}{\ensuremath{<}}
+
 $if(listings)$
-\usepackage[usenames,dvipsnames]{color}
 \definecolor{lightlightgray}{gray}{0.95}
 \usepackage{listings}
 \lstset{
@@ -109,6 +112,7 @@ showstringspaces=false
 showtabs=false,                        
 }
 $endif$
+
 
 $if(numbersections)$
 $else$
